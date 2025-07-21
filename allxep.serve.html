@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎾 테니스 후라이팬 서브 교정 훈련법</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+
+        :root {
+            --primary-color: #4CAF50; /* Tennis Green */
+            --secondary-color: #FFC107; /* Tennis Ball Yellow */
+            --background-color: #f4f7f6;
+            --card-bg-color: #ffffff;
+            --text-color: #333333;
+            --light-gray-color: #e0e0e0;
+            --dark-gray-color: #555555;
+            --border-radius: 12px;
+            --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--primary-color), #388E3C);
+            color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 900;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header .subtitle {
+            font-size: 1.2em;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+        
+        header .subtitle span {
+            display: inline-block;
+            margin: 0 10px;
+            background: rgba(255,255,255,0.15);
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+
+        .goal {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.1em;
+            border: 2px solid #E6A200;
+        }
+
+        .step-card {
+            background-color: var(--card-bg-color);
+            border-radius: var(--border-radius);
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            border-left: 5px solid var(--primary-color);
+            overflow: hidden;
+        }
+
+        .step-card h2 {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: 0;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .step-card h3 {
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .step-card p, .step-card ul {
+            margin-bottom: 20px;
+        }
+        
+        .step-card ul {
+            padding-left: 20px;
+        }
+        
+        .step-card li {
+            margin-bottom: 8px;
+        }
+
+        .tip, .point, .brain-food {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .brain-food {
+             background-color: #fff9c4;
+             border-left-color: #FFC107;
+        }
+
+        .step-card img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: var(--border-radius);
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            border-top: 1px solid var(--light-gray-color);
+            padding-top: 20px;
+        }
+
+        .nav-buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        
+        .nav-buttons a:hover {
+            background-color: #388E3C;
+            transform: translateY(-2px);
+        }
+        
+        .nav-buttons .home {
+            background-color: var(--dark-gray-color);
+        }
+        .nav-buttons .home:hover {
+            background-color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+
+        th, td {
+            border: 1px solid var(--light-gray-color);
+            padding: 12px 15px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: #e8f5e9;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        td a {
+            color: white;
+            background-color: var(--primary-color);
+            padding: 8px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            text-align: center;
+        }
+        td a:hover {
+            background-color: #388E3C;
+        }
+
+        .summary {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border-top: 5px solid var(--primary-color);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .summary h2 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+        }
+
+        .summary p {
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <a id="header"></a>
+    <div class="container">
+        <header>
+            <h1>🎾 테니스 후라이팬 서브 교정 훈련법</h1>
+            <div class="subtitle">
+                <span>👶 정말 쉽게!</span>
+                <span>💡 실전 중심으로!</span>
+                <span>🎾 라켓 들고 재미있게!</span>
+            </div>
+        </header>
+
+        <div class="goal">
+            <strong>목표:</strong> 면만 대는 후라이팬 서브 → 팔꿈치 위로 들고, 내전과 회전을 쓰는 진짜 서브로 교정하기!
+        </div>
+
+        <!-- 훈련 단계 -->
+        <div id="step1" class="step-card">
+            <h2>✅ 1. 서브 그립부터 제대로!</h2>
+            <h3>🔹 훈련: 컨티넨탈 그립 익히기</h3>
+            <p><strong>방법:</strong> 망치 쥐듯 라켓을 잡으세요. 라켓을 바닥에 놓고 그대로 집어 올리면 쉽게 잡을 수 있습니다.</p>
+            <img src="images/step1-grip.png" alt="망치를 쥐듯이 잡는 테니스 컨티넨탈 그립 설명 다이어그램">
+            <ul>
+                <li><strong>확인법 1:</strong> 라켓면이 코트 바닥과 수직을 이룹니다.</li>
+                <li><strong>확인법 2:</strong> 손목을 꺾었을 때 라켓이 좌우로 편안하게 흔들릴 수 있습니다.</li>
+            </ul>
+            <div class="tip">
+                <strong>💡 팁:</strong> 처음엔 살짝 어색하지만, 나중에 강력한 스냅을 걸고 공에 회전을 주려면 무조건 이 그립으로 시작해야 합니다.
+            </div>
+            <div class="nav-buttons">
+                <a href="#header" class="home">처음으로</a>
+                <a href="#step2">다음 단계 ▶</a>
+            </div>
+        </div>
+
+        <div id="step2" class="step-card">
+            <h2>✅ 2. 후라이팬 습관 없애기: 내전 감각 깨우기</h2>
+            <h3>🔹 훈련: 내전 스윙 감각 연습</h3>
+            <p><strong>방법:</strong></p>
+            <img src="images/step2-pronation.jpg" alt="서브 시 팔뚝을 회전시키는 내전 동작의 순차적인 모습">
+            <ol>
+                <li>라켓을 머리 뒤에 숨깁니다.</li>
+                <li>팔뚝을 안쪽으로 회전시켜 라켓면이 앞을 향하게 만듭니다.</li>
+                <li>이때 손바닥은 바깥쪽에서 안쪽으로 돌아와야 합니다.</li>
+            </ol>
+            <p><strong>포인트:</strong> 팔 전체로 "휘두르는" 느낌이 아니라, 팔뚝을 "돌려서" 공을 맞히는 감각을 찾는 것이 중요합니다!</p>
+            <div class="brain-food">
+                <strong>🧠 핵심 지식:</strong> 후라이팬 서브는 내전 없이 라켓 면으로 '찍는' 동작입니다. 이 훈련이 잘못된 스윙 패턴을 바꾸는 가장 중요한 열쇠입니다.
+            </div>
+            <div class="nav-buttons">
+                <a href="#step1">◀ 이전 단계</a>
+                <a href="#step3">다음 단계 ▶</a>
+            </div>
+        </div>
+
+        <div id="step3" class="step-card">
+            <h2>✅ 3. 팔꿈치 위치 교정: 위로 던지듯!</h2>
+            <h3>🔹 훈련: 엘보 업 & 백스크래치</h3>
+            <p><strong>방법:</strong></p>
+             <img src="images/step3-backscratch.jpg" alt="테니스 서브 시 팔꿈치를 높이 들고 라켓으로 등을 긁는 듯한 백스크래치 자세">
+            <ol>
+                <li>라켓을 머리 위로 든 뒤(트로피 자세),</li>
+                <li>라켓 헤드가 등을 긁는 느낌으로 자연스럽게 아래로 떨어뜨립니다.</li>
+                <li>그 상태에서 위로 스윙합니다!</li>
+            </ol>
+            <p><strong>포인트:</strong> 팔꿈치가 항상 어깨보다 높은 위치를 유지해야 합니다. 손이 [머리 위 → 등 뒤 → 다시 위로] 올라오는 궤도를 만드세요.</p>
+            <div class="nav-buttons">
+                <a href="#step2">◀ 이전 단계</a>
+                <a href="#step4">다음 단계 ▶</a>
+            </div>
+        </div>
+
+        <div id="step4" class="step-card">
+            <h2>✅ 4. 체중이동 연습: 팔로만 치지 말기!</h2>
+            <h3>🔹 훈련: 앞발 차올리기 Drill</h3>
+            <p><strong>방법:</strong></p>
+            <img src="images/step4-weight-shift.png" alt="서브 스윙과 동시에 뒷발을 앞으로 차올리며 체중을 싣는 동작">
+            <ol>
+                <li>공 없이 빈 스윙으로 연습합니다.</li>
+                <li>오른손잡이 기준, 오른발을 뒤에 두고 준비 자세를 취합니다.</li>
+                <li>스윙과 동시에 왼발(앞발) 쪽으로 체중을 완전히 이동시킵니다.</li>
+            </ol>
+            <p><strong>포인트:</strong> 몸통과 하체가 서브 파워의 진짜 원천입니다. 팔이 아닌, 온몸으로 체중을 밀어주는 연습이 중요합니다.</p>
+            <div class="nav-buttons">
+                <a href="#step3">◀ 이전 단계</a>
+                <a href="#step5">다음 단계 ▶</a>
+            </div>
+        </div>
+
+        <div id="step5" class="step-card">
+            <h2>✅ 5. 반동 & 스냅 만들기: 내전 + 회전 = 진짜 서브!</h2>
+            <h3>🔹 훈련: 풍선 스윙 or 테니스스틱 스윙</h3>
+            <p><strong>방법 (테니스스틱 버전):</strong></p>
+             <img src="images/step5-swing-stick.jpg" alt="테니스 스윙 연습 도구인 스윙 스틱을 휘두르는 모습">
+            <ol>
+                <li>테니스스틱(또는 수건)을 라켓처럼 잡습니다.</li>
+                <li>내전 동작과 함께 스윙하면, 채찍처럼 '팡!'하는 날카로운 소리가 납니다.</li>
+            </ol>
+            <p><strong>도움:</strong> 손목 스냅이 제대로 걸리지 않으면 소리가 나지 않습니다. 이 훈련은 자연스러운 내전과 라켓 헤드 가속 연습에 최고의 효과를 보입니다!</p>
+            <div class="nav-buttons">
+                <a href="#step4">◀ 이전 단계</a>
+                <a href="#step6">다음 단계 ▶</a>
+            </div>
+        </div>
+        
+        <div id="step6" class="step-card">
+            <h2>✅ 6. 공 던지기 (토스)도 교정 포인트!</h2>
+            <h3>🔹 훈련: 토스 → 타점 고정 연습</h3>
+            <p><strong>방법:</strong></p>
+             <img src="images/step6-toss.jpg" alt="팔을 곧게 펴서 일정한 위치로 공을 토스하는 훈련 자세">
+            <ol>
+                <li>공을 던질 때 팔꿈치를 구부리지 않고 어깨를 축으로 들어 올립니다.</li>
+                <li>공이 항상 내 왼쪽 눈썹 앞(오른손잡이 기준) 지점으로 똑같이 떨어지도록 연습합니다.</li>
+            </ol>
+            <p class="point"><strong>😭 포인트:</strong> 공이 너무 뒤로 가거나 옆으로 빠지면, 몸이 무너지면서 결국 후라이팬 스타일로 칠 수밖에 없게 됩니다. 일정한 토스가 좋은 서브의 시작입니다.</p>
+            <div class="nav-buttons">
+                <a href="#step5">◀ 이전 단계</a>
+                <a href="#routine">훈련 루틴 ▶</a>
+            </div>
+        </div>
+
+        <!-- 훈련 루틴 -->
+        <div id="routine" class="step-card">
+            <h2>🎯 훈련 루틴 예시 (1일 10~15분)</h2>
+            <img src="images/routine.jpg" alt="테니스 코트에서 한 여성이 서브 훈련을 하는 모습">
+            <table>
+                <thead>
+                    <tr>
+                        <th>순서</th>
+                        <th>훈련 내용</th>
+                        <th>반복</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>컨티넨탈 그립 잡고 익숙해지기</td>
+                        <td>2분</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>내전 감각 빈 스윙</td>
+                        <td>20회</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>엘보 업 & 백스크래치 빈 스윙</td>
+                        <td>10회</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>체중이동 빈 스윙</td>
+                        <td>10회</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>테니스스틱 스윙 or 수건 스윙</td>
+                        <td>10회</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>토스 → 타점 고정 연습</td>
+                        <td>10회</td>
+                    </tr>
+                    <tr>
+                        <td>✅</td>
+                        <td><strong>마무리: 실제 서브 10개 도전</strong></td>
+                        <td><strong>10개</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="nav-buttons">
+                <a href="#step6">◀ 이전 단계</a>
+                <a href="#tools">추천 도구 ▶</a>
+            </div>
+        </div>
+
+        <!-- 추천 도구 -->
+        <div id="tools" class="step-card">
+            <h2>🛠 추천 훈련 도구</h2>
+            <img src="images/tools.jpg" alt="다양한 테니스 훈련 보조 도구들이 모여있는 이미지">
+            <table>
+                <thead>
+                    <tr>
+                        <th>도구명</th>
+                        <th>기능 및 효과</th>
+                        <th>구매링크</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>테니스 스틱</strong></td>
+                        <td>가볍게 채찍처럼 휘두르며 내전과 스냅 감각을 익히는 데 탁월합니다.</td>
+                        <td><a href="https://link.coupang.com/a/cFTPdV" target="_blank" rel="noopener noreferrer">훈련도구 보기</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Solo Trainer</strong></td>
+                        <td>혼자서도 반복적인 서브 연습이 가능해 타점 감각과 스윙 궤도를 익히기 좋습니다.</td>
+                        <td><a href="https://link.coupang.com/a/cFTRNp" target="_blank" rel="noopener noreferrer">훈련도구 보기</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>서브 콘 타겟</strong></td>
+                        <td>네트를 넘긴 공이 떨어질 위치를 시각적으로 보여주어 방향성과 정확도 훈련에 좋습니다.</td>
+                        <td><a href="https://link.coupang.com/a/cFTSkB" target="_blank" rel="noopener noreferrer">훈련도구 보기</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Topspin Pro</strong></td>
+                        <td>스핀 원리를 직관적으로 이해시켜 주며, 면을 닫고 감아 올리는 올바른 스윙 궤도를 만드는 데 도움을 줍니다.</td>
+                        <td><a href="https://link.coupang.com/a/cFTSLz" target="_blank" rel="noopener noreferrer">훈련도구 보기</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="nav-buttons">
+                <a href="#routine">◀ 이전 단계</a>
+                <a href="#header" class="home">처음으로 ▶</a>
+            </div>
+        </div>
+
+        <!-- 핵심 요약 -->
+        <div class="summary">
+            <h2>💬 핵심 요약</h2>
+            <p>후라이팬 서브는 당장은 편하지만, 실력 향상의 큰 벽이 됩니다.<br>
+            지금부터 <strong>그립 + 내전 + 체중이동</strong>을 제대로 익혀서 진짜 서브의 길로 나아가세요!</p>
+            <p style="font-size:1.5em; color: var(--primary-color);">"서브는 손이 아니라, 몸으로 치는 것입니다." 🎾</p>
+        </div>
+
+        <footer>
+            <p>© 2025 테니스 교육 자료. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
